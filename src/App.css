@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  display: flex;
+  align-items: center;
 }
 
 .App-logo {
@@ -35,4 +37,30 @@
   to {
     transform: rotate(360deg);
   }
+}
+.quiz-container{
+  width: 600px;
+  height: 500px;
+  background-color: #61dafb;
+  border: 3px solid beige;
+  color:#282c34;
+  align-items: center;
+  
+}
+.option-section{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+
+}
+button{
+  padding: 10px;
+  width: 150px;
+  border-radius: 10px;
+  border: 1px solid beige;
+  font-size: 20px;
+}
+button:hover{
+  background-color: #e4bec4;
 }
