@@ -17,9 +17,7 @@ const Quizz = () => {
         }
 
     }
-    const displayScore=()=>{
-        return score;
-    }
+    
   return (
     <div className="quiz-container">
         <h1>Question{currentquestion+1}/{QuestionsResponce.length}</h1>
@@ -27,11 +25,11 @@ const Quizz = () => {
        <div className="option-section">
       {QuestionsResponce[currentquestion].Options.map((item,index)=>
       
-       <button onClick={handleCurrentquestion(item.iscorrect)} key={index}>{item.option}</button>
+       <button onClick={()=>{handleCurrentquestion(item.iscorrect)}} key={index}>{item.option}</button>
       )}
     </div>
-    <div>
-        <button onClick={displayScore}>Your Score </button>
+    <div className="btn-score">
+        <button>Your Score :{score <= QuestionsResponce.length? score : alert("your quiz has finished")}</button>
     </div>
    
     </div>
